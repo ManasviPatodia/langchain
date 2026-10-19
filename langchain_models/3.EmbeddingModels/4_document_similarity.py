@@ -1,6 +1,6 @@
 from langchain_openai import OpenAIEmbeddings
 from dotenv import load_dotenv
-from sklearn.metrix.pairwise import cosine_similarity
+from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 
 load_dotenv()
@@ -21,4 +21,10 @@ query="Tell me about Virat Kholi"
 doc_embeddings = embeding.embed_documents(documents)
 query_embedding = embeding.embed_query(query)
 
-print(cosine_similarity([query_embedding], doc_embeddings))
+score = cosine_similarity([query_embedding], doc_embeddings)[0]
+
+index,score= sorted(list(enumerate(score)), key=lambda x:x[1])[-1]
+
+print(query)
+print(documents[index])
+print(score)
