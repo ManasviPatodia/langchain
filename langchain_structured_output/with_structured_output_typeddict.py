@@ -1,3 +1,9 @@
+#TypeDict: only gives us the structure of the output, but doesnt validate it
+#Annotated: allows us to describe what we want the LLM to generate for the key of the dict
+#Literal: allows us to restrict the output to a specific set of values
+#Optional: allows us to specify that a key in the dict is optional and may not be present in the output
+
+
 from langchain_google_genai import ChatGoogleGenerativeAI
 from dotenv import load_dotenv
 from typing import TypedDict,Annotated,Literal,Optional
