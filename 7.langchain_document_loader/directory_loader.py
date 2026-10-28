@@ -12,3 +12,5 @@ docs = loader.lazy_load()
 
 for document in docs:
     print(document.metadata)
+
+#lazy load: allows to load and then give output adn then remove, jaldi hota loading isse

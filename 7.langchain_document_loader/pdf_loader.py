@@ -1,4 +1,4 @@
-#breaks the pdf into pages ke size ka list item
+#breaks the pdf into pages ke size ka list item--- use when we have text and we want to load this text
 
 from langchain_community.document_loaders import PyPDFLoader
 
